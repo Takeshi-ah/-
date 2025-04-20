@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap");
+ @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+ 
+ .reproductor-musica {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: var(--white);
+     width: 380px;
+     padding: 10px 30px;
+     border-radius: 20px;
+ }
+ 
+ .reproductor-musica h1 {
+     font-size: 1.5rem;
+     font-weight: 600;
+     line-height: 1.6;
+ }
+ 
+ .reproductor-musica p {
+     font-size: 1rem;
+     font-weight: 400;
+     opacity: 0.6;
+ }
+
+ .control-volumen {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  #volumen {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  #volumen.visible {
+    width: 100px; 
+    opacity: 1;
+    pointer-events: auto;
+  }
+ 
+ #progreso {
+     appearance: none;
+     -webkit-appearance: none;
+     width: 100%;
+     height: 7px;
+     background: rgba(163, 162, 164, 0.4);
+     border-radius: 4px;
+     margin: 32px 0 24px;
+     cursor: pointer;
+ }
+ 
+ #progreso::-webkit-slider-thumb {
+     appearance: none;
+     -webkit-appearance: none;
+     background: rgba(163, 162, 164, 0.9);
+     width: 16px;
+     aspect-ratio: 1/1;
+     border-radius: 50%;
+     outline: 4px solid var(--white);
+     box-shadow: 0 6px 10px rgba(5, 36, 28, 0.3);
+ }
+ 
+ .controles {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+ 
+ .controles button {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 50px;
+     aspect-ratio: 1/1;
+     margin: 20px;
+     background: rgba(163, 162, 164, 0.3);
+     color: var(--white);
+     border-radius: 50%;
+     border: 1px solid rgba(255, 255, 255, 0.3);
+     outline: 0;
+     font-size: 1.5rem;
+     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+     cursor: pointer;
+     transition: all 0.3s linear;
+ }
+ 
+ .controles button:is(:hover, :focus-visible) {
+     transform: scale(0.96);
+ }
+ 
+ .controles button:nth-child(2) {
+     transform: scale(1.3);
+ }
+ 
+ .controles button:nth-child(2):is(:hover, :focus-visible) {
+     transform: scale(1.25);
+ }
